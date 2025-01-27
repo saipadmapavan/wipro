@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class IterateArrayList {
+    public static void main(String[] args) {
+        // Create a new ArrayList
+        ArrayList<String> colors = new ArrayList<>();
+
+        // Add some colors to the ArrayList
+        colors.add("Red");
+        colors.add("Blue");
+        colors.add("Green");
+        colors.add("Yellow");
+        colors.add("Purple");
+
+        // Iterate through the ArrayList using a for-each loop
+        System.out.println("Iterating using for-each loop:");
+        for (String color : colors) {
+            System.out.println(color);
+        }
+
+        // Iterate through the ArrayList using a for loop
+        System.out.println("\nIterating using for loop:");
+        for (int i = 0; i < colors.size(); i++) {
+            System.out.println(colors.get(i));
+        }
+
+        // Iterate through the ArrayList using an iterator
+        System.out.println("\nIterating using Iterator:");
+        java.util.Iterator<String> iterator = colors.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        // Iterate through the ArrayList using a lambda expression
+        System.out.println("\nIterating using lambda expression:");
+        colors.forEach(color -> System.out.println(color));
+    }
+}
+
